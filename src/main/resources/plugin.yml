@@ -1,0 +1,7 @@
+    name: SupremeChatPlus
+version: 1.0.0
+main: net.devscape.project.supremechatplus.SupremeChatPlus
+api-version: 1.21
+authors:
+  - Win9x9xME
+description: An addon plugin for SupremeChat that provides interactive tag support

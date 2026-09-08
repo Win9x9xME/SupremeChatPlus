@@ -1,0 +1,79 @@
+﻿# ============================================================
+# SupremeChatPlus - Interactive Tag Configuration
+# ============================================================
+# All tags can be dynamically added, removed, or modified here.
+# Each tag supports the following options:
+#   enabled:       true/false - Enable or disable this tag
+#   trigger:       The text to match in chat messages (case-insensitive)
+#   display_text:  The text shown in place of the trigger (supports MiniMessage & & color codes)
+#   hover_text:    The text shown when hovering over the display (supports PlaceholderAPI)
+#   click_command: The command executed when clicking the display (supports %player%)
+#   permission:    Permission required to use this tag (set to "none" for no permission)
+#
+# Available placeholders:
+#   %player%        - Player name
+#   %display_name%  - Player display name
+#   %world%         - Player's current world name
+#   %item_name%     - Item name in main hand (for [hand] tag)
+#   Any PlaceholderAPI placeholder (e.g., %vault_prefix%)
+# ============================================================
+
+tags:
+  # ============================================================
+  # [inv] - Display a clickable "背包" text that opens the player's inventory.
+  # DISABLED by default because SupremeChat has a built-in item-in-chat system
+  # that uses similar functionality. Enable only if you want a separate
+  # inventory-viewing tag.
+  # ============================================================
+  inv:
+    enabled: false
+    trigger: "[inv]"
+    display_text: "&a[背包]"
+    hover_text: "&7点击查看 &e%player% 的背包物品"
+    click_command: "/openinv %player%"
+    permission: "supremechatplus.tag.inv"
+
+  # ============================================================
+  # [ender] - Display a clickable "末影箱" text that opens the player's ender chest.
+  # DISABLED by default to avoid potential conflicts with SupremeChat's item system.
+  # ============================================================
+  ender:
+    enabled: false
+    trigger: "[ender]"
+    display_text: "&5[末影箱]"
+    hover_text: "&7点击查看 &e%player% 的末影箱"
+    click_command: "/openender %player%"
+    permission: "supremechatplus.tag.ender"
+
+  # ============================================================
+  # [hand] - Display a clickable "物品" text that shows held item info.
+  # ENABLED by default - this is a unique feature not conflicting with SupremeChat.
+  # ============================================================
+  hand:
+    enabled: true
+    trigger: "[hand]"
+    display_text: "&b[物品]"
+    hover_text: "&7手持物品: &e%item_name%"
+    click_command: "/iteminfo %player%"
+    permission: "supremechatplus.tag.hand"
+
+  # ============================================================
+  # Example additional tags (commented out - uncomment to use):
+  # ============================================================
+  # 以下是自定义标签示例，取消注释即可使用：
+  #
+  # server:
+  #   enabled: true
+  #   trigger: "[server]"
+  #   display_text: "&6[服务器信息]"
+  #   hover_text: "&7点击查看服务器信息"
+  #   click_command: "/server"
+  #   permission: "none"
+  #
+  # website:
+  #   enabled: true
+  #   trigger: "[website]"
+  #   display_text: "&b[官网]"
+  #   hover_text: "&7点击打开官网"
+  #   click_command: "/website"
+  #   permission: "none"

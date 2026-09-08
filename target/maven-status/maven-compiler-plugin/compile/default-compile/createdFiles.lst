@@ -1,0 +1,5 @@
+net\devscape\project\supremechatplus\listener\ChatTagListener.class
+net\devscape\project\supremechatplus\config\ConfigManager$TagConfig.class
+net\devscape\project\supremechatplus\SupremeChatPlus.class
+net\devscape\project\supremechatplus\config\ConfigManager.class
+net\devscape\project\supremechatplus\resolver\TagResolver.class
